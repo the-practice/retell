@@ -1,0 +1,260 @@
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.dashboard-actions {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #e74c3c;
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: #c0392b;
+}
+
+.btn-secondary:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Cache Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.stat-value.pending {
+  color: #f39c12;
+}
+
+.stat-value.synced {
+  color: #27ae60;
+}
+
+.stat-value.failed {
+  color: #e74c3c;
+}
+
+/* Calls List */
+.calls-section {
+  grid-column: span 2;
+}
+
+.calls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.call-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.call-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.call-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-initiated {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-in_progress {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-completed {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-failed {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.call-phone {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.call-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.call-time {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+}
+
+.call-duration {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.empty-state {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 2rem;
+}
+
+/* Providers List */
+.providers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.provider-item {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.provider-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.provider-item p {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.provider-item .note {
+  font-style: italic;
+  color: #e74c3c;
+}
+
+/* Insurance List */
+.insurance-list {
+  list-style: none;
+}
+
+.insurance-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.insurance-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calls-section {
+    grid-column: span 1;
+  }
+}
